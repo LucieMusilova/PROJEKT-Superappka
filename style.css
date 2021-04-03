@@ -54,9 +54,7 @@ ul {
 }
 
 .menu li {
-  border: 1px solid rgb(43, 42, 42);
   margin-top: 4px;
-  border-radius: 10px;
 }
 
 .logo {
@@ -65,6 +63,8 @@ ul {
 }
 
 .menu a {
+  border-radius: 10px;
+  border: 2px solid #48418e;
   display: block;
   text-decoration: none;
   color: black;
@@ -73,10 +73,10 @@ ul {
 }
 
 .menu a:hover,
-.menu a:focus,
 .menu a:active {
   background-color: #48418e;
   color: white;
+  border-radius: 10px;
 }
 
 .banner img {
@@ -185,8 +185,15 @@ footer p {
   }
 
   .menu li {
-    border: none;
     margin: 0;
+  }
+
+  .menu a {
+    border: none;
+  }
+
+  .menu a:hover {
+    border-radius: 0%;
   }
 
   .logo,
