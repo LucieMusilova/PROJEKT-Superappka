@@ -21,6 +21,7 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
+  color: black;
 }
 
 .obal {
@@ -30,4 +31,246 @@ body {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ----- zde začni psát vlastní CSS ----- */
+/*verze mobil*/
+
+.obal {
+  max-width: 500px;
+  text-align: center;
+}
+
+header {
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+.menu li, 
+.logo {
+  display: block;
+  list-style-type: none;
+}
+
+.menu li {
+  border: 1px solid rgb(43, 42, 42);
+  margin-top: 4px;
+  border-radius: 10px;
+}
+
+.logo {
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+  background-color: #48418e;
+  color: white;
+}
+
+.banner img {
+  display: none;
+}
+
+.banner {
+  min-height: 450px;
+  background-image: url(images/pozadi.jpg);
+  background-size: cover;
+  color: white;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0;
+  padding: 15px;
+}
+
+.banner p {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.tlacitka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.banner a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.banner a:hover,
+.banner a:active {
+  background-color: #48418e;
+}
+
+.box {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+  margin: 20px;
+}
+
+.box img {
+  max-width: 70px;
+}
+
+.box h2,
+.box p {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #48418e;
+}
+
+footer {
+  background-color: #48418e;
+  color:white;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* verze tablet*/
+
+@media screen and (min-width: 700px) {
+
+  .obal {
+    min-width: 700px;
+  } 
+
+  ul {
+    display: flex;
+    margin: 0;
+  }
+
+  .menu li,
+  .logo,
+  .menu a {
+    display: inline-block;
+  }
+
+  .menu li {
+    border: none;
+    margin: 0;
+  }
+
+  .logo,
+  .menu a {
+    padding: 15px 30px;
+  }
+
+  .banner {
+    margin: 0;
+  }
+
+  .tlacitka {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .banner a {
+    width: auto;
+    padding: 10px 30px;
+  }
+
+  .prvni {
+    margin-right: 20px;
+  }
+
+  .boxy {
+    display:flex;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .box h2,
+  .box p {
+    padding: 0;
+  }
+
+  .box h2 {
+    margin-top: 15px;
+  }
+
+}
+
+/* verze PC*/
+@media screen and (min-width: 960px) {
+
+
+  .obal {
+    max-width: 960px;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    position: relative;
+  }
+
+  .leva {
+    text-align: left;
+    margin: 0;
+  }
+
+  h1 {
+    padding: 0;
+  }
+
+  .tlacitka {
+    justify-content: left;
+  }
+
+  .banner img {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+}
